@@ -1,7 +1,9 @@
 <template>
   <div class="main">
     <el-tabs type="border-card">
-      <el-tab-pane label="微信">微信</el-tab-pane>
+      <el-tab-pane label="微信">
+        <div class="con1">hjahsjashashahsajsahjs</div>
+      </el-tab-pane>
       <el-tab-pane label="twitter">twitter</el-tab-pane>
       <el-tab-pane label="Facebook">Facebook</el-tab-pane>
       <el-tab-pane label="QQ">QQ</el-tab-pane>
