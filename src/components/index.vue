@@ -1,6 +1,9 @@
 <template>
   <div class="index-wrap">
     <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+      <el-tab-pane label="主界面" name="main">
+        <main-index></main-index>
+      </el-tab-pane>
       <el-tab-pane label="NTOUCH提醒" name="ntouch">
         <n-touch></n-touch>
       </el-tab-pane>
@@ -27,6 +30,7 @@
 </template>
 
 <script>
+import MainIndex from './Main';
 import NTouch from './Ntouch';
 import Email from './Email';
 import Application from './Application';
@@ -38,7 +42,7 @@ import Help from './Help';
 export default {
   data() {
     return {
-      activeName: 'ntouch',
+      activeName: 'main',
     };
   },
   methods: {
@@ -47,6 +51,7 @@ export default {
     },
   },
   components: {
+    MainIndex,
     NTouch,
     Email,
     Application,

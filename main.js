@@ -7,8 +7,8 @@ let onlineStatusWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 1170,
-    height: 800,
+    width: 1200,
+    height: 780,
     title: "系统通知监测软件",
     // frame: false,
     minWidth: 800,
