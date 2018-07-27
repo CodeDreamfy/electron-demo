@@ -1,0 +1,68 @@
+.inner-ntouch {
+  width: 100%; height: 600px;
+  display: flex;
+  justify-content: space-around;
+  .event-wrap, .warn-btn {
+    flex: 0 0 40%;
+    .title {
+      height: 40px; line-height: 40px;
+      border-radius: 8px 8px 0 0 ;
+      display: flex; justify-content: space-between;
+      align-items: center;
+      background: #373942;
+      color: #fff; padding: 0 12px 0;
+      a{color: #fff;}
+    }
+  }
+  .event-wrap {
+    overflow: hidden;
+    
+    .content {
+      border: 1px solid #9fa0a7;
+      border-radius: 0 0 8px 8px;
+      height: 400px;
+      overflow: hidden;
+      .scroll-wrap {
+        overflow-y: auto; height: 400px;
+        padding: 10px;
+        li {
+          height: 42px; line-height: 30px;
+          padding: 6px; margin-top: 4px;
+          border-radius: 6px;
+          &:nth-child(odd) {
+            background: rgb(219, 219, 219);
+          }
+          &:nth-child(even) {
+            background: #f1f1f1;
+          }
+          &:first-child{ margin-top: 0; }
+        }
+      }
+    }
+  }
+  .warn-btn {
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      height: 300px;
+      overflow-y: auto;
+      justify-content: flex-start;
+      border: 1px solid #9fa0a7;
+      border-radius: 0 0 6px 6px;
+      .control-btn {
+        display: flex;
+        flex: 0 0 50%; height: 60px;
+        align-items: center;
+        & > a {
+          flex: 0 0 40px; height: 40px;
+          border-radius: 50%; margin-right: 20px;
+        }
+        & > p {
+          flex: 0 0 1; font-size: 12px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,54 +1,59 @@
 <template>
   <div class="index-wrap">
-    <div class="left">
-      <div class="device-info device-items">
-        <div class="title">设备详情（Device info）</div>
-        <div class="content">
-          <div class="img">
-            <img src="../assets/dengta.png" alt="">
-          </div>
-          <div class="info">
-            <p><span>Status：</span><span>no Bink(1)</span></p>
-            <p><span>Serial number：</span><span>sasasa2121</span></p>
-            <p><span>Serial number1：</span><span>sasasa2121</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="device-items device-event">
-        <div class="title">最近消息（Recent Events）</div>
-        <div class="content">
-          <div class="overscroll-wrap">
-            <ul>
-              <li>FackBook收到一条好友消息</li>
-              <li>微信收到一条好友消息</li>
-              <li>twitter收到一条好友消息</li>
-              <li>微信收到一条好友消息</li>
-              <li>twitter收到一条好友消息</li>
-              <li>微信收到一条好友消息</li>
-              <li>twitter收到一条好友消息</li>
-              <li>twitter收到一条好友消息</li>
-              <li>twitter收到一条好友消息</li>
-            </ul>
-          </div>
-          <a href="javascript:;" class="clear-btn">忽略所有（Dismiss All）</a>
-        </div>
-      </div>
-    </div>
-    <div class="main">
-      <con-main></con-main>
-    </div>
+    <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+      <el-tab-pane label="NTOUCH提醒" name="ntouch">
+        <n-touch></n-touch>
+      </el-tab-pane>
+      <el-tab-pane label="邮件提醒" name="email">
+        <email></email>
+      </el-tab-pane>
+      <el-tab-pane label="社交信息提醒" name="application">
+        <application></application>
+      </el-tab-pane>
+      <el-tab-pane label="闹钟" name="alarm-clock">
+        <alarm-clock></alarm-clock>
+      </el-tab-pane>
+      <el-tab-pane label="计时器" name="timer">
+        <timer></timer>
+      </el-tab-pane>
+      <el-tab-pane label="设置" name="setting">
+        <setting></setting>
+      </el-tab-pane>
+      <el-tab-pane label="帮助" name="help">
+        <help></help>
+      </el-tab-pane>
+    </el-tabs>
   </div>
 </template>
 
 <script>
-import conMain from './main';
+import NTouch from './Ntouch';
+import Email from './Email';
+import Application from './Application';
+import AlarmClock from './AlarmClock';
+import Timer from './Timer';
+import Setting from './Setting';
+import Help from './Help';
 
 export default {
   data() {
-    return {};
+    return {
+      activeName: 'ntouch',
+    };
+  },
+  methods: {
+    handleClick() {
+      return false;
+    },
   },
   components: {
-    conMain,
+    NTouch,
+    Email,
+    Application,
+    AlarmClock,
+    Timer,
+    Setting,
+    Help,
   },
 };
 </script>
